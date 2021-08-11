@@ -1,0 +1,9 @@
+[
+    {
+        "titulo": "Introducción",
+        "explicacion": "Este es el pentagrama lugar donde escribimos música con ayuda de las notas y figuras rítmicas",
+        "siguiente": "Siguiente",
+        "imagen": "./assets/level1/pentagrama.png",
+        "object_fit": "cover"
+    }
+]

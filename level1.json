@@ -41,6 +41,13 @@
             "following": "Siguiente",
             "image": "./assets/level1/Diapositiva24.JPG",
             "object_fit": "cover"
+        },
+        {
+            "title": "",
+            "explanation": "Bien hecho, ahora a practicar ¿Deseas comenzar el ejercicio?",
+            "following": "Siguiente",
+            "image": "",
+            "object_fit": "cover"
         }
     ],
     "exercise1": [

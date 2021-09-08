@@ -63,7 +63,16 @@ body {
     align-items: center;
 }
 
+.claves_sol a {
+    color: white;
+    text-decoration: none;
+}
 
+.claves_sol a:hover {
+    color: plum;
+    text-decoration: underline;
+    font-size: 30px;
+}
 .container {
     width: 98vw;
     height: 97vh;
@@ -103,6 +112,7 @@ body {
     width: 60%;
     padding: 10px;
     margin: 5px;
+    
 }
 .button:hover {
     background-color: orange;

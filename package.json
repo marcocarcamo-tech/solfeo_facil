@@ -1,0 +1,18 @@
+{
+  "name": "solfeo_prototipo",
+  "version": "1.0.0",
+  "description": "Web Application for learning music",
+  "main": "level1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "solfeo",
+    "educacion",
+    "musical",
+    "aprender",
+    "musica"
+  ],
+  "author": "Marco Carcamo <macdevg@gmail.com>",
+  "license": "MIT"
+}

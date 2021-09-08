@@ -49,12 +49,18 @@ body {
     height: 100px;
     padding-right: 60px;
     display: flex;
-    margin: 20px 20px;
+    margin: 20px 100px 20px 20px;
     font-size: 24px;
 }
 .claves__modules--container img{
     height: 200px;
-    padding-right: 60px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -79,10 +85,18 @@ body {
     font-size: 20px;
     padding: 10px;
 }
-.container__imagen{
+.container__image--explanation{
+    object-fit: contain;
+    height: 200px;
+    width: 70%;
+}
+.container__image--question{
     object-fit: cover;
     height: 200px;
     width: 70%;
+}
+.buttons {
+    display: flex;
 }
 .button {
     background-color: peru;

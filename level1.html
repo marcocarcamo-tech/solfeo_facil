@@ -10,24 +10,19 @@
 <body>
     <div class="container">
         <div class="container__header">
-            <h1 class="container__title">Título</h1>
-            <div class="container__explanation">
+            <h1 class="container__title" id="container__title">Título</h1>
+            <div class="container__explanation" id="container__explanation">
                 Explicación
             </div>
-            <img src="" class="container__imagen">
+            <img src="" class="container__image--explanation" id="container__image--explanation">
         </div>
-        <div class="button" id="button1">
-            Opción 1
+        <div class="button" id="button1" onclick="changeSheet('button1')">
+            Siguiente
         </div>
-        <div class="button" id="button2">
-            Opción 2
-        </div>
-        <div class="button" id="button3">
-            Opción 3
-        </div>
-        <div class="button" id="button4">
-            Opción 4
+        <div class="button" id="button2" onclick="changeSheet('button2')">
+            Regresar
         </div>
     </div>
+    <script src="./level1.js"></script>
 </body>
 </html>

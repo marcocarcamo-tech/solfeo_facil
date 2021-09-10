@@ -105,10 +105,11 @@ body {
     
 }
 .container__explanation{
-    font-size: 20px;
-    padding: 10px;
+    font-size: 25px;
+    margin: 20px;
 }
 .container__question{
+    font-size: 25px;
     margin: 20px;
 }
 .container__image--explanation{

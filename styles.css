@@ -82,26 +82,44 @@ body {
     justify-content: center;
     border: 2px solid white;
 }
+.points{
+    display:flex;
+    justify-content: right;
+    width: 100%;
+    height: 200px;
+    margin-top: 0;
+}
+.points__counter {
+    margin-top: 0;
+    margin-right: 300px;
+    font-size: 25px;
+}
 .container__header{
     background-color: gray;
     min-width: 300px;
     width: 70%;
+    
 }
 .container__title{
     font-size: 25px;
+    
 }
 .container__explanation{
     font-size: 20px;
     padding: 10px;
 }
+.container__question{
+    margin: 20px;
+}
 .container__image--explanation{
-    object-fit: contain;
-    height: 200px;
+    
+    height: 300px;
     width: 70%;
 }
 .container__image--question{
-    object-fit: cover;
-    height: 200px;
+    
+    
+    height: 300px;
     width: 70%;
 }
 .buttons {

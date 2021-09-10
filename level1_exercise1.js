@@ -14,12 +14,12 @@ let totalQuestions = 20;
 let totalAnswers = 0;
 let rightAnswers = 0;
 let wrongAnswers = 0;
-let scoreCount;
+let scoreCount = 0;
 
 
 
 randomQuestion();
-
+select_id("points__counter").innerHTML = `Puntos: ${scoreCount}`;
 
 function randomQuestion() {
     chooseQuestion(Math.floor(Math.random() * interpreter_bp["exercise1"].length))
@@ -33,7 +33,7 @@ function chooseQuestion(n) {
     select_id("container__image--question").setAttribute("src", question.image)
     style("container__image--question").objectFit = question.object_fit;
     disorderAnswers(question)
-    
+    scoreCalculator(rightAnswers, wrongAnswers)
 }
 
 
@@ -94,11 +94,13 @@ function finishGame(){
     scoreCalculator(rightAnswers, wrongAnswers);
 };
 
+
 //Make the calculation for the score 
 function scoreCalculator (right, wrong) {
     let rightPoints = right * 10;
     let wrongPoints = wrong * 2;
     scoreCount = rightPoints - wrongPoints;
+    select_id("points__counter").innerHTML = `Puntos: ${scoreCount}`;
     console.log(`Hiciste ${scoreCount} puntos`)
 }
 
@@ -110,6 +112,7 @@ function select_id(id) {
 function style(id) {
     return select_id(id).style
 }
+
 
 function readText(localRoute) {
     var texto = null;

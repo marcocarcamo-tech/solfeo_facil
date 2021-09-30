@@ -1,17 +1,23 @@
-let data_base = readText("./level1.json")
+let data_base = readText("../js/level1.json")
 let interpreter_bp = JSON.parse(data_base)
-
-
-chooseSheet(0);
 
 
 let totalElements = [];
 let sheetCounter = 0;
 let isLastEement;
 
+let levelString = document.body.id;
 
-totalElements = Object.keys(interpreter_bp["explanation"]).length;
+chooseSheet(0);
+
+let level = interpreter_bp[levelString]
+
+totalLevels = Object.keys(interpreter_bp).length;
+console.log(totalLevels)
+
+totalElements = Object.keys(level).length;
 console.log(totalElements)
+
 
 function changeSheet(elementId) {
     
@@ -41,16 +47,14 @@ function changeSheet(elementId) {
 
 function chooseSheet(n) {
     
-    sheet = interpreter_bp["explanation"][n]
+    
+    sheet = interpreter_bp[levelString][n]
     select_id("container__title").innerHTML = sheet.title
     select_id("container__explanation").innerHTML = sheet.explanation
     select_id("container__image--explanation").setAttribute("src", sheet.image)
     style("container__image--explanation").objectFit = sheet.object_fit;
     
-    
-    
 }
-
 
 function select_id(id) {
     return document.getElementById(id)

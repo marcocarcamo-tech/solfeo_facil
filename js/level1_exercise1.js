@@ -1,13 +1,16 @@
-let data_base = readText("./level1.json")
+let data_base = readText("../js/level1.json")
 let interpreter_bp = JSON.parse(data_base)
 
 let possibleAnswers;
+let possibleWrongAnswers;
+let randomWrong;
 let question;
 let matching_button = [
     select_id("button1"),
     select_id("button2"),
     select_id("button3")
 ]
+let right;
 let rightAnswer;
 let wrongAnswer;
 let totalQuestions = 20;
@@ -15,7 +18,7 @@ let totalAnswers = 0;
 let rightAnswers = 0;
 let wrongAnswers = 0;
 let scoreCount = 0;
-
+let levelExerciseString = document.body.id;
 
 
 randomQuestion();
@@ -28,7 +31,7 @@ function randomQuestion() {
 
 
 function chooseQuestion(n) {
-    question = interpreter_bp["exercise1"][n]
+    question = interpreter_bp[levelExerciseString][n]
     select_id("container__question").innerHTML = question.question
     select_id("container__image--question").setAttribute("src", question.image)
     style("container__image--question").objectFit = question.object_fit;
@@ -39,25 +42,39 @@ function chooseQuestion(n) {
 
 
 function disorderAnswers(question) {
+
     //Array with possible answers
     possibleAnswers = [
         question.right, //[0]
         question.wrong1, //[1]
-        question.wrong2 //[2]
-    ]
-    //Makin random the array
-    possibleAnswers.sort(() => Math.random()-0.5)
-    //Match the buttons in HTML with indexes of the array
-    select_id("button1").innerHTML = possibleAnswers[0]
-    select_id("button2").innerHTML = possibleAnswers[1]
-    select_id("button3").innerHTML = possibleAnswers[2]
+        question.wrong2, //[2]
+        question.wrong3,
+        question.wrong4,
+        question.wrong5,
+        question.wrong6
 
+    ]
+
+    //Making random the array
+    possibleAnswers.shift();
+    possibleAnswers.sort(() => Math.random()-0.5)
+    possibleAnswers.unshift(question.right);
     
+    possibleButtons = [
+        possibleAnswers[0],
+        possibleAnswers[1],
+        possibleAnswers[2]
+    ]   
+    possibleButtons.sort(() => Math.random()-0.5)
+    //Match the buttons in HTML with indexes of the array
+    select_id("button1").innerHTML = possibleButtons[0]
+    select_id("button2").innerHTML = possibleButtons[1]
+    select_id("button3").innerHTML = possibleButtons[2]
 }
 
 function pressButton(i) {
     
-    if (possibleAnswers[i]== question.right){
+    if (possibleButtons[i]== question.right){
         matching_button[i].style.backgroundColor = "green"
         rightAnswer = true;
         rightAnswers++;

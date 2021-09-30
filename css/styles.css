@@ -82,6 +82,7 @@ body {
     justify-content: center;
     border: 2px solid white;
 }
+
 .points{
     display:flex;
     justify-content: right;
@@ -136,6 +137,10 @@ body {
 .button:hover {
     background-color: orange;
     cursor: pointer;
+}
+.form__list a {
+    color: white;
+    text-decoration: none;
 }
 .footer {
     align-items: center;

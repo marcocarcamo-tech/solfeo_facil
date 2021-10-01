@@ -25,7 +25,7 @@ randomQuestion();
 select_id("points__counter").innerHTML = `Puntos: ${scoreCount}`;
 
 function randomQuestion() {
-    chooseQuestion(Math.floor(Math.random() * interpreter_bp["exercise1"].length))
+    chooseQuestion(Math.floor(Math.random() * interpreter_bp[levelExerciseString].length))
 }
 
 
